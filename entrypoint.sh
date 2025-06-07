@@ -7,6 +7,5 @@ tar xzf vs_server_linux-x64_${INPUT_VS_VERSION}.tar.gz
 rm vs_server_linux-x64_${INPUT_VS_VERSION}.tar.gz
 
 cd /github/workspace
-for filename in *; do
-    dotnet run --project ./${filename}/ZZCakeBuild/CakeBuild.csproj -- "$@"
-done
+
+dotnet run --project ./${filename}/ZZCakeBuild/CakeBuild.csproj -- "$@"
