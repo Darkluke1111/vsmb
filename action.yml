@@ -1,0 +1,13 @@
+# action.yml
+name: 'Build VS Mod'
+description: 'Builds a Vinatge Story Code Mod'
+inputs:
+  vs_version:
+    description: 'The Vintage Story Version that should be used to build the Mod'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env: 
+  args:
+    - ${{ inputs.vs_version }}
