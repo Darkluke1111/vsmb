@@ -14,4 +14,8 @@ for file in Releases/*.zip; do
     echo "RESULT=$file" >> ${GITHUB_ENV} 
 done
 
+MOD_VERSION= cat ./${filename}/${filename}/modinfo.json | jq -r '.version'
+echo "MOD_VERSION=$MOD_VERSION" >> ${GITHUB_ENV}
+
+
 
