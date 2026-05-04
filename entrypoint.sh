@@ -8,7 +8,7 @@ rm vs_server_linux-x64_${INPUT_VS_VERSION}.tar.gz
 
 cd /github/workspace
 
-modVersion = find . -name modinfo.json | xargs cat | jq -r '.version'
+modVersion=$(find . -name modinfo.json | xargs cat | jq -r '.version')
 echo "MOD_VERSION=$modVersion"
 echo "MOD_VERSION=$modVersion" >> ${GITHUB_ENV}
 
